@@ -11,10 +11,12 @@ y0=0
 for i in range(n):
     s=1
     for j in range(n):
-        s=s*((x0-x[j])/(x[i]-x[j]))
+        if i!=j:
+            
+           s=s*((x0-x[j])/(x[i]-x[j]))
     y0=y0+s*y[i]
 
-print('Interpolated value is %.3f',y0)
+print('Interpolated value is ',y0)
 def f(x):
     return 2**x
 ya=f(x0)
